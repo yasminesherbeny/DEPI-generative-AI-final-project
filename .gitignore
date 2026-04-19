@@ -1,0 +1,15 @@
+# Python
+_pycache_/
+*.py[cod]
+
+# Environments
+venv/
+.env
+
+# Large Files & Weights
+*.bin
+*.pt
+*.pth
+checkpoint-*/
+results/
+dataset_cache/
