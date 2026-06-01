@@ -12,5 +12,4 @@ venv/
 *.pt
 *.pth
 checkpoint-*/
-results/
 dataset_cache/
