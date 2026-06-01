@@ -11,5 +11,4 @@ venv/
 *.bin
 *.pt
 *.pth
-checkpoint-*/
 dataset_cache/
