@@ -1,11 +1,11 @@
-// Nabra Prompt Builder — interactivity for the DEPI Generative AI Final Project
+// Prompt Builder — interactivity for the DEPI Generative AI Final Project
 // Builds structured prompts for the GPT-2 LoRA product description model.
 
 (() => {
   'use strict';
 
-  const HISTORY_KEY = 'nabra.promptHistory';
-  const THEME_KEY = 'nabra.theme';
+  const HISTORY_KEY = 'promptBuilder.promptHistory';
+  const THEME_KEY = 'promptBuilder.theme';
 
   const TEMPLATE_PRESETS = {
     ecommerce: { tone: 'Professional', length: 'Medium (100 words)', style: 'Formal', cta: true },

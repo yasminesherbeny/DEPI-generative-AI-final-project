@@ -1,4 +1,4 @@
-# Nabra Prompt Builder — How It Was Built
+# Prompt Builder — How It Was Built
 
 A static, single-page web tool for constructing prompts for the project's GPT-2 + LoRA
 product description generator ([`src/inference/generate.py`](../src/inference/generate.py)).
@@ -47,9 +47,9 @@ this is a small enough surface that classes would just add ceremony):
 - **Actions** — copy prompt, copy as Python, download JSON, save to history, reset.
   Clipboard writes use the async Clipboard API with a `document.execCommand('copy')`
   fallback for browsers/contexts where it's unavailable.
-- **History** — persisted to `localStorage` (`nabra.promptHistory`), rendered into the
-  slide-out sidebar with per-item load/delete, plus export-all and clear-all.
-- **Theme** — persisted to `localStorage` (`nabra.theme`), toggles the `data-theme`
+- **History** — persisted to `localStorage` (`promptBuilder.promptHistory`), rendered into
+  the slide-out sidebar with per-item load/delete, plus export-all and clear-all.
+- **Theme** — persisted to `localStorage` (`promptBuilder.theme`), toggles the `data-theme`
   attribute the CSS keys off of.
 - **Particle background** — a lightweight canvas animation (particle count scaled to
   viewport area, capped at 70) purely for visual polish; it doesn't affect app state.
