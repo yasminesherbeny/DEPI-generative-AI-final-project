@@ -1,8 +1,12 @@
 # scripts/run_train.py
 
+import sys
+import os
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
 from src.data.load_data import load_dataset
 from src.data.preprocess import full_preprocessing_pipeline
-from src.data.feature_engineering import feature_pipeline
+from src.data.feature_engineering import feature_pipeline, save_features
 from src.nlp.prompt_builder import prompt_pipeline
 from src.training.dataset_preparation import prepare_datasets
 from src.training.training_lora import (
@@ -22,6 +26,8 @@ def run():
     df = load_dataset()
     df = full_preprocessing_pipeline(df)
     df = feature_pipeline(df)
+    os.makedirs("data/processed", exist_ok=True)
+    save_features(df)
     df = prompt_pipeline(df)
 
     # -------------------------
