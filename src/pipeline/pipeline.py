@@ -39,9 +39,8 @@ def run_pipeline(
 
     # apply your filters
     filtered = apply_all_filters(raw_results, color=color, category=category)
-
     # build enriched prompt
-    prompt = build_prompt(name, color, retrieved_examples=filtered)
+    prompt = build_prompt(name, color)
 
     # generate description
     description = generate_text(generator, prompt)
