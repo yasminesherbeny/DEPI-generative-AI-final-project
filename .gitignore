@@ -13,6 +13,10 @@ venv/
 checkpoint-*/
 results/
 dataset_cache/.venv/
-lora_model/
+
 __pycache__/
 *.pyc
+.venv/
+__pycache__/
+*.pyc
+lora_model/
